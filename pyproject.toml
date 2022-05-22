@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "mkdocs-deploy-confluence"
+version = "0.1.0"
+description = ""
+authors = ["Bastian Hoyer <dafire@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+md2cf = "^1.3.1"
+loguru = "^0.6.0"
+atlassian-python-api = "^3.23.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.poetry.plugins."mkdocs.plugins"]
+"deploy-confluence" = "mkdocs_deploy_confluence:DeployConfluence"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
